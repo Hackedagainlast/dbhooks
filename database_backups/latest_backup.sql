@@ -60,8 +60,29 @@ CREATE TABLE `orders` (
 
 LOCK TABLES `orders` WRITE;
 /*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES (1,'2025-01-09',10.00,1),(2,'2000-10-11',32.00,1),(3,'2000-10-11',32.00,1),(4,'2000-10-11',32.00,1),(5,'2025-01-03',33.00,2),(6,'2025-01-03',33.00,2);
+INSERT  IGNORE INTO `orders` VALUES (1,'2025-01-09',10.00,1),(2,'2000-10-11',32.00,1),(3,'2000-10-11',32.00,1),(4,'2000-10-11',32.00,1),(5,'2025-01-03',33.00,2),(6,'2025-01-03',33.00,2);
 /*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `saaa`
+--
+
+DROP TABLE IF EXISTS `saaa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `saaa` (
+  `saaa` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `saaa`
+--
+
+LOCK TABLES `saaa` WRITE;
+/*!40000 ALTER TABLE `saaa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `saaa` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -85,7 +106,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'nitendra','prideepsingh1818@gmail.com'),(2,'nitendra','prideepsingh1818@gmail.com'),(3,'nitendra','prideepsingh1818@gmail.com');
+INSERT  IGNORE INTO `users` VALUES (1,'nitendra','prideepsingh1818@gmail.com'),(2,'nitendra','prideepsingh1818@gmail.com'),(3,'nitendra','prideepsingh1818@gmail.com');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -98,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-10 13:32:26
+-- Dump completed on 2025-02-10 13:40:56
